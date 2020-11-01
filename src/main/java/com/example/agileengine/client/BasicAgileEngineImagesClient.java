@@ -51,6 +51,6 @@ public class BasicAgileEngineImagesClient implements AgileEngineImageClient {
         ResponseEntity<Map> response = restTemplate.exchange(
                 API_URL + "/auth", HttpMethod.POST, request, Map.class);
 
-//        response.getBody().computeIfPresent("token", (key, newToken) -> token = String.valueOf(newToken));
+        response.getBody().computeIfPresent("token", (key, newToken) -> token = String.valueOf(newToken));
     }
 }

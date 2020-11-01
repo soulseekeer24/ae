@@ -22,7 +22,7 @@ public class BasicSearchService implements SearchService {
             searchResult.addAll(findByAuthor(author));
         }
         if (camera != null) {
-            searchResult.addAll(findByCamera(author));
+            searchResult.addAll(findByCamera(camera.trim()));
         }
         if (tags != null) {
             searchResult.addAll(

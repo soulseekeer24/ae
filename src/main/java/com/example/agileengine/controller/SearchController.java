@@ -17,8 +17,8 @@ public class SearchController {
     public SearchResultDTO searchImages(
             @RequestParam(required = false) String author,
             @RequestParam(required = false) String camera,
-            @RequestParam(required = false) String tags
+            @RequestParam(required = false, value = "") String tags
     ) {
-        return new SearchResultDTO(searchService.findMatching(author, camera, tags.split(",")));
+        return new SearchResultDTO(searchService.findMatching(author, camera, tags != null ? tags.split(",") : null));
     }
 }
