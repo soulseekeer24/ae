@@ -1,0 +1,3 @@
+caching:
+  refresh: 300000
+  retry: 3
